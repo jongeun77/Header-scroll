@@ -1,0 +1,113 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+body{
+  margin: 0;
+}
+header{
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+header.active .lnb-inner{
+  /* display: none; */
+  height: 0; /*애니처럼 올라간다 높이를 없애고 오버플로우히든으로 감추는거 기억남.. */
+  overflow: hidden;
+}
+header.active .gnb-inner{
+  background-color: #fff;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+  color: #000;
+}
+li,ul{
+  list-style: none;
+  margin: 0;
+}
+.lnb-inner{
+  background-color: #e7b359;
+  height: 30px;
+  padding: 0 100px;
+}
+
+.lnb-inner ul li{
+  float: right;
+  padding: 0 20px;
+  line-height: 30px;
+}
+.gnb-inner{
+  height: 80px;
+  transition: 0.5s;
+  line-height: 80px;
+  padding: 0 100px;
+}
+.gnb-inner ul li{
+  float: right;
+  padding: 0 20px;
+  line-height: 80px;
+}
+section img{
+  width: 100%;
+  margin-bottom: 50px;
+}
+.box{
+  padding: 0 50px;
+}
+.banner{
+  background: url(1.png)no-repeat center/cover;
+  width: 29%;
+  height: 300px;
+  float: left;
+  margin: 20px;
+  box-sizing: border-box;
+  margin-left: 50px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.banner:before{
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+.banner:hover:before{
+  background: rgba(0, 0, 0, .1);
+}
+.banner:nth-child(2){
+  background: url(2.png)no-repeat center/cover;
+
+}
+.banner:nth-child(3){
+  background: url(3.png)no-repeat center/cover;
+  
+}
+.btn-top{
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  font-size: 30px;
+  color: #fff;
+  background-color: #e7b359;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+  /* margin: -100%; */
+  transform: translateY(100px); /*고투탑은 최초상태를 아래에 두는데, 마진으로 내려도되고, 트랜스폼 트랜슬레잇y로 해도됨*/
+  opacity: 0;
+}
+.btn-top.active{
+  transform: translateY(0);
+  opacity:1;
+}
+
+section p{
+  font-size: 3em;
+  color: #ddd;
+}

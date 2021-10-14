@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header scroll with gototop</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="lnb-inner">
+        <ul>
+          <li>Sign in</li>
+          <li>Service</li>
+          <li>Business News</li>
+        </ul>
+      </div>
+      <div class="gnb-inner">
+        <ul>
+          <li>Business checking</li>
+          <li>Merchant Service</li>
+          <li>Business News</li>
+          <li>Resource center</li>
+          <li>Schedule a meeting</li>
+        </ul>
+      </div>
+    </header>
+    <section>
+      <img src="image-asset.jpeg" alt="">
+      <div class="box">
+        <div class="banner"></div>
+        <div class="banner"></div>
+        <div class="banner"></div>
+      </div>      
+    </section>
+  </div>
+  <a href="#" class="btn-top">
+    <i class="fa fa-arrow-up"></i>
+  </a>
+  <script>
+    $(window).scroll(function(){
+      if($(window).scrollTop() > 50){
+        $('header,.btn-top').addClass('active')
+      }
+      else{$('header,.btn-top').removeClass('active')}
+    })
+  </script>
+</body>
+</html>
