@@ -10,6 +10,7 @@ header{
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 1;
 }
 header.active .lnb-inner{
   /* display: none; */
@@ -35,6 +36,7 @@ li,ul{
   float: right;
   padding: 0 20px;
   line-height: 30px;
+  cursor: pointer;
 }
 .gnb-inner{
   height: 80px;
@@ -46,6 +48,7 @@ li,ul{
   float: right;
   padding: 0 20px;
   line-height: 80px;
+  cursor: pointer;
 }
 section img{
   width: 100%;
@@ -53,17 +56,16 @@ section img{
 }
 .box{
   padding: 0 50px;
+  display: flex;
+  height: 400px;
 }
 .banner{
   background: url(1.png)no-repeat center/cover;
-  width: 29%;
-  height: 300px;
-  float: left;
   margin: 20px;
   box-sizing: border-box;
-  margin-left: 50px;
   margin-bottom: 50px;
   position: relative;
+  flex:1;
 }
 .banner:before{
     content: "";
@@ -80,10 +82,12 @@ section img{
 }
 .banner:nth-child(2){
   background: url(2.png)no-repeat center/cover;
+  flex:1;
 
 }
 .banner:nth-child(3){
   background: url(3.png)no-repeat center/cover;
+  flex:1;
   
 }
 .btn-top{
@@ -108,6 +112,7 @@ section img{
 }
 
 section p{
-  font-size: 3em;
+  font-size: 4em;
   color: #ddd;
+  text-align: center;
 }
